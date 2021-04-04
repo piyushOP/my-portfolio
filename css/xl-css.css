@@ -1,0 +1,70 @@
+@media only screen and (min-width: 1500px) {
+  .nav-links li a {
+    font-size: 3.5rem !important;
+  }
+  .hello {
+    left: 42.5%;
+  }
+  .hello h1 {
+    line-height: 1.2;
+  }
+  .home-sec-div-1-content h1 {
+    font-size: 7rem;
+  }
+  .home-sec-div-1-content p {
+    font-size: 2rem;
+  }
+  .home-sec-div-2-content h1 {
+    font-size: 7rem;
+  }
+  .home-sec-div-2-content p {
+    font-size: 2rem;
+  }
+  .card-1 h2 {
+    font-size: 4rem !important;
+  }
+  .card-1 p {
+    font-size: 3rem !important;
+  }
+  .card-2 h2 {
+    font-size: 4rem !important;
+  }
+  .card-2 p {
+    font-size: 3rem !important;
+  }
+  .about-para {
+    width: 100%;
+  }
+  .about-para p {
+    font-size: 3rem !important;
+  }
+  #contact h6, #contact hr {
+    color: var(--slate);
+    font-family: var(--popin-font);
+    font-size: 4.3rem;
+  }
+  #contact p {
+    color: var(--slate);
+    font-family: var(--gilroy-font);
+    font-size: 2.2rem;
+  }
+  #contact a {
+    color: var(--green);
+  }
+  #contact a img {
+    height: 80px;
+    width: 80px;
+  }
+  #contact .contact-heading {
+    font-size: 5.4rem;
+    font-weight: 900;
+  }
+  #contact .filter-green {
+    -webkit-filter: invert(100%) sepia(50%) saturate(1929%) hue-rotate(81deg) brightness(106%) contrast(97%);
+            filter: invert(100%) sepia(50%) saturate(1929%) hue-rotate(81deg) brightness(106%) contrast(97%);
+  }
+  #contact .col-md-6 i {
+    padding: 2rem;
+  }
+}
+/*# sourceMappingURL=xl-css.css.map */
