@@ -5,11 +5,8 @@ let div_1_content = document.querySelector(".home-sec-div-1-content");
 let div_2_content = document.querySelector(".home-sec-div-2-content");
 let bg_animation_div_1 = document.querySelector(".bg-bubbles-div-1");
 let bg_animation_div_2 = document.querySelector(".bg-bubbles-div-2");
-let card1 = document.querySelector(".card-1");
-let card1_btn = document.querySelector(".card-1-btn");
-let card2 = document.querySelector(".card-2");
-let card2_btn = document.querySelector(".card-2-btn");
-
+let nav = document.querySelector('input');
+let change = false;
 
 function over1(){
    home_sec_div_1.classList.add("width_inc_div1");
@@ -42,22 +39,13 @@ function out2(){
    bg_animation_div_2.style.display="none";   
 }
 
-function card1Over(){
-   card1.classList.add("card-animation-js");
-   card1_btn.style.display="unset";
-}
 
-function card1Out(){
-   card1.classList.remove("card-animation-js");
-   card1_btn.style.display="none";
-}
-
-function card2Over(){
-   card2.classList.add("card-animation-js");
-   card2_btn.style.display="unset";
-}
-
-function card2Out(){
-   card2.classList.remove("card-animation-js");
-   card2_btn.style.display="none";
+function navChange(){
+   if(change==false){
+      hello.style.display="none";
+      change = !change;
+   }else{
+      hello.style.display="block";
+      change = !change;
+   }
 }

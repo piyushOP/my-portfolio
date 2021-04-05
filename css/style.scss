@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import url('//db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
 *{
    padding: 0;
@@ -7,7 +8,6 @@
    box-sizing: border-box !important;
    list-style: none !important;
    text-decoration: none !important;
-   font-size: 10px;
 }
 
 :root{
@@ -15,6 +15,7 @@
    --popin-font: 'Poppins', sans-serif;
    --seigo-font : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    --gilroy-font: 'Gilroy', sans-serif ;
+   --rubik-font: 'Rubik', sans-serif;
    --green : #64ffda;
    --slate: #8892b0;
    --navy : #0a192f;
@@ -26,6 +27,7 @@
 
 html, body {
    overflow-x:hidden;
+   font-size: 62.5%;
  }
 
  body{
@@ -79,7 +81,7 @@ html{
 
 .nav-links > ul > li > a{
    display: inline-block;
-   font-size: 2.5em;
+   font-size: 2.5rem;
    font-weight: 600;
    color: white !important;
    font-family: var(--popin-font);
@@ -114,11 +116,11 @@ html{
 
 .hello > h1{
    animation: hello 1s .5s backwards;
-   color: black;
-   font-size: 20em !important;
-   font-weight: 400 !important;
+   color: rgba(0, 0, 0, 0.857);
+   font-size: 20rem !important;
+   font-weight: 300 !important;
    line-height: 1;
-   font-family: var(--gilroy-font) !important;
+   font-family: var(--rubik-font) !important;
 }
 
 
@@ -145,6 +147,7 @@ html{
 
 .home-sec-div-1-content{
    position: relative;
+   font-size: 6.5rem;
    top: 20%;
    left: 15%;
    height: 40%;
@@ -154,7 +157,7 @@ html{
 .home-sec-div-1-content > h1{
    width: 100%;
    color: black;
-   font-size: 6.5em;
+   font-size: 6.5rem;
    font-family: var(--seigo-font);
    font-weight: normal;
    letter-spacing: -6px;
@@ -165,7 +168,7 @@ html{
 .home-sec-div-1-content > p{
    color: rgba(255, 255, 255, 0.665);
    color: black;
-   font-size: 2em;
+   font-size: .3em;
    font-family: var(--seigo-font);
    font-weight: 200;  
 }
@@ -181,6 +184,7 @@ html{
 
 .home-sec-div-2-content{
    position: relative;
+   font-size: 6.5rem;
    top: 20%;
    left: 50%;
    height: 40%;
@@ -189,7 +193,7 @@ html{
 
 .home-sec-div-2-content > h1{
    color: white;
-   font-size: 6.5em;
+   font-size: 6.5rem;
    font-family: var(--seigo-font);
    font-weight: normal;
    letter-spacing: -6px;
@@ -199,7 +203,7 @@ html{
 
 .home-sec-div-2-content > p{
    color: rgba(255, 255, 255, 0.864);
-   font-size: 2rem;
+   font-size: .3em;
    font-family: var(--seigo-font);
    font-weight: 300;
 }
@@ -298,108 +302,112 @@ html{
    left: 5%;
    height: 60%;
    border-left: 3px solid var(--green);
+   
+
+
+   .card-front-side{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      color: gray;
+   }
+
+
+   .card-back-side{
+      backface-visibility: hidden;
+      height: 100%;
+      background-color: var(--green);
+      width: 100%;
+      position: absolute;
+      transform: rotateY(180deg);
+   
+      a{
+         position: absolute;
+         font-weight: 600;
+         top: 25%;
+         cursor: pointer;
+         font-size: 1em;
+         left: 35%;
+         
+         color: #4a5d9b;
+         text-transform: uppercase;
+         font-family: var(--popin-font);
+      }
+
+   }
+
+
+
    .card-1{
       position: relative;
       text-align: center;
       height: 30%;
+      font-size: 3.5rem;
       top: 5%;
       left: 1%;
       width: 50%;
       border: 1px solid var(--green);
-      transition: background-color 0.3s ease;
+      transition: all .8s ease;
+      perspective: 150rem;
+     
       
+      &:hover{
+         transform: rotateY(-180deg);
+      }
+
+      &:hover .card-back-side{
+         backface-visibility: visible;
+      }
+
       h2{
          
-         font-size: 300%;
+         font-size: 3.5rem;
          color: var(--green);
          font-family: var(--baloo-font);
       }
    
       p{
-         font-size: 200%;
+         font-size: .5em;
          color: gray;
          font-family: var(--seigo-font);
       }
-
-      .card-1-btn{
-         display: none;
-         position: absolute;
-         top: 20%;
-         cursor: pointer;
-         font-weight: 600;
-         font-size: 250%;
-         padding: .5em 1em;
-         left: 35%;
-         
-         color: #4a5d9b;
-         text-transform: uppercase;
-         font-family: var(--popin-font);
-        
-      }
-
-      .card-1-btn:hover{
-         transform: translateY(-.2em);
-         text-shadow: 5px 5px 10px gray;
-      }
    }
+   
 
-   .card-1:hover{
-      background-color: var(--green);
-       p{
-          color: var(--green);
-       }
-   }
-
-
-
-   .card-2{
+   .card-2{  
+      position: relative;
       text-align: center;
-      width: 50%;
       height: 30%;
-      position: absolute;
-      top: 58%;
+      font-size: 3.5rem;
+      top: 30%;
       left: 1%;
+      width: 50%;
       border: 1px solid var(--green);
-      
+      transition: all .8s ease;
+      perspective: 150rem;
+
+
+
+      &:hover{
+         transform: rotateY(-180deg);
+      }
+
+      &:hover .card-back-side{
+         backface-visibility: visible;
+      }
+
       h2{
-         font-size: 300%;
+         
+         font-size: 3.5rem;
          color: var(--green);
          font-family: var(--baloo-font);
       }
    
       p{
-         font-size: 200%;
+         font-size: .5em;
          color: gray;
          font-family: var(--seigo-font);
       }
-
-      .card-2-btn{
-         display: none;
-         position: absolute;
-         font-weight: 600;
-         top: 20%;
-         cursor: pointer;
-         font-size: 250%;
-         padding: .5em 1em;
-         left: 35%;
-         
-         color: #4a5d9b;
-         text-transform: uppercase;
-         font-family: var(--popin-font);
-        
-      }
-
-      .card-2-btn:hover{
-         transform: translateY(-.2em);
-         text-shadow: 5px 5px 10px gray;
-      }
-   }
-
-   .card-2:hover{
-      background-color: var(--green);
-       p{
-          color: var(--green);
-       }
    }
    
 }
@@ -414,14 +422,6 @@ html{
    position: absolute;
    top: 100%;
    left: -1.5%;
-}
-
-
-
-// Education-sec's JS Additional classes
-
-.card-animation-js{
-   animation: card1 1s ;
 }
 
 
@@ -554,7 +554,6 @@ html{
 
 #projects{
    padding: 1rem;
-   // height: 100vh;
    background-color: var(--blue);
 }
 
@@ -614,7 +613,7 @@ html{
    }
 
    .col-lg-3:hover{
-		transform: scale(1.2);
+		transform: scale(1.1);
 		// background: #ff800a;
 		z-index: 2;
 		// box-shadow: 2px 2px 2px #000;
@@ -852,16 +851,6 @@ html{
 
    80%{
       transform: translateY(50px);
-   }
-}
-
-@keyframes card1 {
-   from{
-      transform: rotate(0);
-   }
-
-   to{
-      transform: rotateY(180deg);
    }
 }
 

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 @import url("//db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +8,6 @@
           box-sizing: border-box !important;
   list-style: none !important;
   text-decoration: none !important;
-  font-size: 10px;
 }
 
 :root {
@@ -15,6 +15,7 @@
   --popin-font: 'Poppins', sans-serif;
   --seigo-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --gilroy-font: 'Gilroy', sans-serif ;
+  --rubik-font: 'Rubik', sans-serif;
   --green: #64ffda;
   --slate: #8892b0;
   --navy: #0a192f;
@@ -26,6 +27,7 @@
 
 html, body {
   overflow-x: hidden;
+  font-size: 62.5%;
 }
 
 body {
@@ -79,7 +81,7 @@ html {
 
 .nav-links > ul > li > a {
   display: inline-block;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-weight: 600;
   color: white !important;
   font-family: var(--popin-font);
@@ -115,11 +117,11 @@ html {
 .hello > h1 {
   -webkit-animation: hello 1s .5s backwards;
           animation: hello 1s .5s backwards;
-  color: black;
-  font-size: 20em !important;
-  font-weight: 400 !important;
+  color: rgba(0, 0, 0, 0.857);
+  font-size: 20rem !important;
+  font-weight: 300 !important;
   line-height: 1;
-  font-family: var(--gilroy-font) !important;
+  font-family: var(--rubik-font) !important;
 }
 
 .dot {
@@ -143,6 +145,7 @@ html {
 
 .home-sec-div-1-content {
   position: relative;
+  font-size: 6.5rem;
   top: 20%;
   left: 15%;
   height: 40%;
@@ -152,7 +155,7 @@ html {
 .home-sec-div-1-content > h1 {
   width: 100%;
   color: black;
-  font-size: 6.5em;
+  font-size: 6.5rem;
   font-family: var(--seigo-font);
   font-weight: normal;
   letter-spacing: -6px;
@@ -161,7 +164,7 @@ html {
 .home-sec-div-1-content > p {
   color: rgba(255, 255, 255, 0.665);
   color: black;
-  font-size: 2em;
+  font-size: .3em;
   font-family: var(--seigo-font);
   font-weight: 200;
 }
@@ -177,6 +180,7 @@ html {
 
 .home-sec-div-2-content {
   position: relative;
+  font-size: 6.5rem;
   top: 20%;
   left: 50%;
   height: 40%;
@@ -185,7 +189,7 @@ html {
 
 .home-sec-div-2-content > h1 {
   color: white;
-  font-size: 6.5em;
+  font-size: 6.5rem;
   font-family: var(--seigo-font);
   font-weight: normal;
   letter-spacing: -6px;
@@ -193,7 +197,7 @@ html {
 
 .home-sec-div-2-content > p {
   color: rgba(255, 255, 255, 0.864);
-  font-size: 2rem;
+  font-size: .3em;
   font-family: var(--seigo-font);
   font-weight: 300;
 }
@@ -278,106 +282,108 @@ html {
   border-left: 3px solid var(--green);
 }
 
+.education-div .card-front-side {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: gray;
+}
+
+.education-div .card-back-side {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 100%;
+  background-color: var(--green);
+  width: 100%;
+  position: absolute;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.education-div .card-back-side a {
+  position: absolute;
+  font-weight: 600;
+  top: 25%;
+  cursor: pointer;
+  font-size: 1em;
+  left: 35%;
+  color: #4a5d9b;
+  text-transform: uppercase;
+  font-family: var(--popin-font);
+}
+
 .education-div .card-1 {
   position: relative;
   text-align: center;
   height: 30%;
+  font-size: 3.5rem;
   top: 5%;
   left: 1%;
   width: 50%;
   border: 1px solid var(--green);
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+}
+
+.education-div .card-1:hover {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.education-div .card-1:hover .card-back-side {
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
 }
 
 .education-div .card-1 h2 {
-  font-size: 300%;
+  font-size: 3.5rem;
   color: var(--green);
   font-family: var(--baloo-font);
 }
 
 .education-div .card-1 p {
-  font-size: 200%;
+  font-size: .5em;
   color: gray;
   font-family: var(--seigo-font);
 }
 
-.education-div .card-1 .card-1-btn {
-  display: none;
-  position: absolute;
-  top: 20%;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 250%;
-  padding: .5em 1em;
-  left: 35%;
-  color: #4a5d9b;
-  text-transform: uppercase;
-  font-family: var(--popin-font);
-}
-
-.education-div .card-1 .card-1-btn:hover {
-  -webkit-transform: translateY(-0.2em);
-          transform: translateY(-0.2em);
-  text-shadow: 5px 5px 10px gray;
-}
-
-.education-div .card-1:hover {
-  background-color: var(--green);
-}
-
-.education-div .card-1:hover p {
-  color: var(--green);
-}
-
 .education-div .card-2 {
+  position: relative;
   text-align: center;
-  width: 50%;
   height: 30%;
-  position: absolute;
-  top: 58%;
+  font-size: 3.5rem;
+  top: 30%;
   left: 1%;
+  width: 50%;
   border: 1px solid var(--green);
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+}
+
+.education-div .card-2:hover {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.education-div .card-2:hover .card-back-side {
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
 }
 
 .education-div .card-2 h2 {
-  font-size: 300%;
+  font-size: 3.5rem;
   color: var(--green);
   font-family: var(--baloo-font);
 }
 
 .education-div .card-2 p {
-  font-size: 200%;
+  font-size: .5em;
   color: gray;
   font-family: var(--seigo-font);
-}
-
-.education-div .card-2 .card-2-btn {
-  display: none;
-  position: absolute;
-  font-weight: 600;
-  top: 20%;
-  cursor: pointer;
-  font-size: 250%;
-  padding: .5em 1em;
-  left: 35%;
-  color: #4a5d9b;
-  text-transform: uppercase;
-  font-family: var(--popin-font);
-}
-
-.education-div .card-2 .card-2-btn:hover {
-  -webkit-transform: translateY(-0.2em);
-          transform: translateY(-0.2em);
-  text-shadow: 5px 5px 10px gray;
-}
-
-.education-div .card-2:hover {
-  background-color: var(--green);
-}
-
-.education-div .card-2:hover p {
-  color: var(--green);
 }
 
 .education-div::after {
@@ -390,11 +396,6 @@ html {
   position: absolute;
   top: 100%;
   left: -1.5%;
-}
-
-.card-animation-js {
-  -webkit-animation: card1 1s;
-          animation: card1 1s;
 }
 
 /* --------------------------------------- */
@@ -587,8 +588,8 @@ html {
 }
 
 .projects-div .col-lg-3:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   z-index: 2;
 }
 
@@ -868,28 +869,6 @@ html {
   80% {
     -webkit-transform: translateY(50px);
             transform: translateY(50px);
-  }
-}
-
-@-webkit-keyframes card1 {
-  from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  to {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-  }
-}
-
-@keyframes card1 {
-  from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  to {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
   }
 }
 
