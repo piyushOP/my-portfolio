@@ -585,11 +585,12 @@ html {
 .projects-div .col-lg-3 {
   -webkit-transition: all 1s;
   transition: all 1s;
+  margin-bottom: 5%;
 }
 
 .projects-div .col-lg-3:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   z-index: 2;
 }
 
